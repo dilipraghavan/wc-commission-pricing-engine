@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<ruleset name="WooCommerce Commission Pricing Engine">
+    <description>PHP_CodeSniffer configuration for WooCommerce Commission & Pricing Engine</description>
+
+    <!-- What to scan -->
+    <file>.</file>
+
+    <!-- Exclude paths -->
+    <exclude-pattern>/vendor/*</exclude-pattern>
+    <exclude-pattern>/node_modules/*</exclude-pattern>
+    <exclude-pattern>/tests/*</exclude-pattern>
+
+    <!-- Show progress and sniff codes -->
+    <arg value="ps"/>
+    <arg name="colors"/>
+    <arg name="extensions" value="php"/>
+
+    <!-- Use WordPress Coding Standards -->
+    <rule ref="WordPress">
+        <!-- Allow short array syntax -->
+        <exclude name="Universal.Arrays.DisallowShortArraySyntax"/>
+        <!-- Allow PSR-4 file naming for src/ -->
+        <exclude name="WordPress.Files.FileName.InvalidClassFileName"/>
+        <exclude name="WordPress.Files.FileName.NotHyphenatedLowercase"/>
+    </rule>
+
+    <!-- Set minimum supported WordPress version -->
+    <config name="minimum_wp_version" value="6.0"/>
+
+    <!-- Set text domain -->
+    <config name="text_domain" value="wcpe"/>
+
+    <!-- Allow . in hook names for namespaced hooks -->
+    <rule ref="WordPress.NamingConventions.ValidHookName">
+        <properties>
+            <property name="additionalWordDelimiters" value="."/>
+        </properties>
+    </rule>
+
+    <!-- Check for PHP cross-version compatibility -->
+    <rule ref="PHPCompatibilityWP"/>
+    <config name="testVersion" value="7.4-"/>
+</ruleset>

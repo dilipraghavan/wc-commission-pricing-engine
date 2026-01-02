@@ -1,0 +1,409 @@
+/**
+ * WooCommerce Commission & Pricing Engine - Admin Styles
+ *
+ * @package WCPE
+ */
+
+/* General Admin Styles */
+.wcpe-wrap {
+	max-width: 1200px;
+}
+
+/* Log Level Badges */
+.wcpe-log-level {
+	display: inline-block;
+	padding: 2px 8px;
+	border-radius: 3px;
+	font-size: 12px;
+	font-weight: 500;
+	text-transform: uppercase;
+}
+
+.wcpe-log-level--info {
+	background-color: #e7f3ff;
+	color: #0073aa;
+}
+
+.wcpe-log-level--warning {
+	background-color: #fff8e5;
+	color: #996800;
+}
+
+.wcpe-log-level--error {
+	background-color: #ffeaea;
+	color: #dc3232;
+}
+
+/* Status Badges */
+.wcpe-status {
+	display: inline-block;
+	padding: 3px 10px;
+	border-radius: 3px;
+	font-size: 12px;
+	font-weight: 500;
+}
+
+.wcpe-status--active,
+.wcpe-status--completed,
+.wcpe-status--paid,
+.wcpe-status--approved {
+	background-color: #d4edda;
+	color: #155724;
+}
+
+.wcpe-status--inactive,
+.wcpe-status--pending {
+	background-color: #fff3cd;
+	color: #856404;
+}
+
+.wcpe-status--failed,
+.wcpe-status--cancelled,
+.wcpe-status--refunded {
+	background-color: #f8d7da;
+	color: #721c24;
+}
+
+.wcpe-status--processing {
+	background-color: #cce5ff;
+	color: #004085;
+}
+
+/* Settings Page */
+.wcpe-settings-content {
+	margin-top: 20px;
+	background: #fff;
+	border: 1px solid #ccd0d4;
+	padding: 20px;
+}
+
+.wcpe-settings-content h3 {
+	margin-top: 30px;
+	padding-top: 20px;
+	border-top: 1px solid #eee;
+}
+
+.wcpe-settings-content h3:first-child {
+	margin-top: 0;
+	padding-top: 0;
+	border-top: none;
+}
+
+/* Rule Type Badges */
+.wcpe-rule-type {
+	display: inline-block;
+	padding: 3px 8px;
+	border-radius: 3px;
+	font-size: 11px;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+
+.wcpe-rule-type--global {
+	background-color: #f0f0f1;
+	color: #50575e;
+}
+
+.wcpe-rule-type--category {
+	background-color: #e5f5fa;
+	color: #0077aa;
+}
+
+.wcpe-rule-type--vendor {
+	background-color: #fef7e5;
+	color: #9d6700;
+}
+
+.wcpe-rule-type--product {
+	background-color: #f0e6f5;
+	color: #7c3aed;
+}
+
+/* Form Styles */
+.wcpe-form-row {
+	margin-bottom: 15px;
+}
+
+.wcpe-form-row label {
+	display: block;
+	margin-bottom: 5px;
+	font-weight: 600;
+}
+
+.wcpe-form-row input[type="text"],
+.wcpe-form-row input[type="number"],
+.wcpe-form-row select,
+.wcpe-form-row textarea {
+	width: 100%;
+	max-width: 400px;
+}
+
+.wcpe-form-row .description {
+	margin-top: 5px;
+	color: #666;
+	font-style: italic;
+}
+
+/* Stats Cards */
+.wcpe-stats-row {
+	display: flex;
+	gap: 20px;
+	margin-bottom: 20px;
+}
+
+.wcpe-stat-card {
+	background: #fff;
+	border: 1px solid #ccd0d4;
+	border-radius: 4px;
+	padding: 20px;
+	min-width: 200px;
+}
+
+.wcpe-stat-card__label {
+	font-size: 13px;
+	color: #666;
+	margin-bottom: 5px;
+}
+
+.wcpe-stat-card__value {
+	font-size: 28px;
+	font-weight: 600;
+	color: #1d2327;
+}
+
+.wcpe-stat-card__value--success {
+	color: #00a32a;
+}
+
+.wcpe-stat-card__value--warning {
+	color: #dba617;
+}
+
+.wcpe-stat-card__value--error {
+	color: #d63638;
+}
+
+/* Actions Column */
+.wcpe-actions a {
+	margin-right: 10px;
+}
+
+.wcpe-actions a.wcpe-action--delete {
+	color: #b32d2e;
+}
+
+.wcpe-actions a.wcpe-action--delete:hover {
+	color: #a00;
+}
+
+/* Modal Styles */
+.wcpe-modal-backdrop {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0, 0, 0, 0.7);
+	z-index: 100000;
+	display: none;
+}
+
+.wcpe-modal {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background: #fff;
+	border-radius: 4px;
+	padding: 30px;
+	max-width: 500px;
+	width: 90%;
+	z-index: 100001;
+	display: none;
+}
+
+.wcpe-modal__header {
+	margin-bottom: 20px;
+}
+
+.wcpe-modal__title {
+	margin: 0;
+	font-size: 18px;
+}
+
+.wcpe-modal__body {
+	margin-bottom: 20px;
+}
+
+.wcpe-modal__footer {
+	text-align: right;
+}
+
+.wcpe-modal__footer .button {
+	margin-left: 10px;
+}
+
+/* Copy Button */
+.wcpe-copy-webhook-url {
+	margin-left: 10px !important;
+}
+
+/* Priority Display */
+.wcpe-priority {
+	display: inline-flex;
+	align-items: center;
+	gap: 5px;
+}
+
+.wcpe-priority__bar {
+	width: 40px;
+	height: 8px;
+	background: #e0e0e0;
+	border-radius: 4px;
+	overflow: hidden;
+}
+
+.wcpe-priority__fill {
+	height: 100%;
+	background: #2271b1;
+	border-radius: 4px;
+}
+
+/* Amount Display */
+.wcpe-amount {
+	font-weight: 600;
+}
+
+.wcpe-amount--positive {
+	color: #00a32a;
+}
+
+.wcpe-amount--negative {
+	color: #d63638;
+}
+
+/* Stripe Connect Status */
+.wcpe-stripe-status {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	padding: 8px 12px;
+	border-radius: 4px;
+}
+
+.wcpe-stripe-status--connected {
+	background: #d4edda;
+	color: #155724;
+}
+
+.wcpe-stripe-status--disconnected {
+	background: #f8d7da;
+	color: #721c24;
+}
+
+.wcpe-stripe-status__icon {
+	font-size: 16px;
+}
+
+/* Vendor Dashboard (Frontend) */
+.wcpe-vendor-dashboard {
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+.wcpe-vendor-dashboard__header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 30px;
+	padding-bottom: 20px;
+	border-bottom: 1px solid #eee;
+}
+
+.wcpe-vendor-dashboard__stats {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+	gap: 20px;
+	margin-bottom: 30px;
+}
+
+.wcpe-vendor-dashboard__commissions {
+	background: #fff;
+	border: 1px solid #eee;
+	border-radius: 4px;
+}
+
+.wcpe-vendor-dashboard__commissions table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.wcpe-vendor-dashboard__commissions th,
+.wcpe-vendor-dashboard__commissions td {
+	padding: 12px 15px;
+	text-align: left;
+	border-bottom: 1px solid #eee;
+}
+
+.wcpe-vendor-dashboard__commissions th {
+	background: #f9f9f9;
+	font-weight: 600;
+}
+
+/* Responsive */
+@media screen and (max-width: 782px) {
+	.wcpe-stats-row {
+		flex-direction: column;
+	}
+
+	.wcpe-stat-card {
+		min-width: auto;
+	}
+
+	.wcpe-vendor-dashboard__header {
+		flex-direction: column;
+		gap: 15px;
+	}
+}
+
+/* Badge */
+.wcpe-badge {
+	display: inline-block;
+	padding: 2px 6px;
+	border-radius: 3px;
+	font-size: 11px;
+	font-weight: 600;
+	vertical-align: middle;
+}
+
+.wcpe-badge--success {
+	background-color: #d4edda;
+	color: #155724;
+}
+
+.wcpe-badge--warning {
+	background-color: #fff3cd;
+	color: #856404;
+}
+
+.wcpe-badge--error {
+	background-color: #f8d7da;
+	color: #721c24;
+}
+
+/* Stripe Link */
+.wcpe-stripe-link {
+	font-family: monospace;
+	font-size: 12px;
+}
+
+/* Error Message */
+.wcpe-error-message {
+	color: #721c24;
+	font-style: italic;
+}
+
+/* Info badge */
+.wcpe-stat-card__value--info {
+	color: #0073aa;
+}
